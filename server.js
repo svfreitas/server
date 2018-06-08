@@ -10,7 +10,7 @@ var app = express();
 // });
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/teste', (req, res) => res.send('<html><body><h1>Hello World!</h1></body></html>'))
 
 
 
