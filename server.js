@@ -11,7 +11,7 @@ console.log(filename);
 console.log(data);
          fs.appendFile(filename,data,(err) => {
             if (err) throw err;
-            console.log('The "data to append" was appended to file!');
+           // console.log('The "data to append" was appended to file!');
           })  
          next();
  });
