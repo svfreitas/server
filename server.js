@@ -5,7 +5,14 @@ var app = express();
 
 
  app.use((req,res,next)=>{
-         fs.appendFileSync('./log.txt',new Date().toString() + ' ' + req.url,(err) => {});  
+        var filename = __dirname+'\\log.txt';
+        var data = new Date().toString() + ' ' + req.url +'\n';
+console.log(filename);
+console.log(data);
+         fs.appendFile(filename,data,(err) => {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+          })  
          next();
  });
 
@@ -15,6 +22,6 @@ app.get('/hello', (req, res) => res.send('<html><body><h1>Hello World!!!!</h1></
 
 
 var port = process.env.PORT || 3000;
-app.listen(process.env.PORT, () => console.log(`Listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 
