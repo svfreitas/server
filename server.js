@@ -4,10 +4,10 @@ const fs = require('fs');
 var app = express();
 
 
-app.use((req,res,next)=>{
-    fs.appendFileSync('log.txt',new Date().toString() + ' ' + req.url,(err) => {});
-    next();
-});
+// app.use((req,res,next)=>{
+//     fs.appendFileSync('log.txt',new Date().toString() + ' ' + req.url,(err) => {});
+//     next();
+// });
 
 
 app.get('/', (req, res) => res.send('Hello World!'))
