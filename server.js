@@ -14,11 +14,11 @@ var app = express();
         //     if (err) throw err;
         //    // console.log('The "data to append" was appended to file!');
         // });
-        fs.appendFileSync(filename,data);
+ 
         next();
  });
 
-app.get('/', (req, res) => res.send('<html><body><h1>Testando</h1></body></html>'))
+app.get('/', (req, res) => res.send('<html><body><h1>Testando123</h1></body></html>'))
 app.get('/hello', (req, res) => res.send('<html><body><h1>Hello World!!!!</h1></body></html>'))
 
 
