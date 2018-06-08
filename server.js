@@ -14,6 +14,7 @@ app.get('/teste', (req, res) => res.send('<html><body><h1>Hello World!</h1></bod
 
 
 
+var port = process.env.PORT || 3000;
+app.listen(process.env.PORT, () => console.log(`Listening on port ${port}!`));
 
-//app.listen(3000, () => console.log('Listening on port 3000!'))
-app.listen(3000);
+
