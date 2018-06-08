@@ -5,7 +5,7 @@ var app = express();
 
 
  app.use((req,res,next)=>{
-        var filename = __dirname+'\\log.txt';
+        var filename = __dirname+'/log.txt';
         var data = new Date().toString() + ' ' + req.url +'\n';
 console.log(filename);
 console.log(data);
