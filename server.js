@@ -5,7 +5,7 @@ var app = express();
 
 
  app.use((req,res,next)=>{
-         fs.appendFileSync('log.txt',new Date().toString() + ' ' + req.url,(err) => {});  
+         fs.appendFileSync('./log.txt',new Date().toString() + ' ' + req.url,(err) => {});  
          next();
  });
 
