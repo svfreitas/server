@@ -13,7 +13,10 @@ function respond(req, res, next) {
   }
   
   var server = restify.createServer();
-  server.get('/hello/:name', respond);
+  server.get('/hello/:name', (req,res,next)=>{
+    res.send('hello!! ' + req.params.name);
+    next();
+  });
   server.head('/hello/:name', respond);
   
   
