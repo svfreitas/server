@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-const rest = require(restify);
+const restify = require(restify);
 
 //var app = express();
 
