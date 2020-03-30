@@ -5,7 +5,7 @@ const restify = require('restify');
 //var app = express();
 
 
-var server = restify.createServer();
+var server = restify.createSserver();
 
 function respond(req, res, next) {
     res.send('hello ' + req.params.name);
